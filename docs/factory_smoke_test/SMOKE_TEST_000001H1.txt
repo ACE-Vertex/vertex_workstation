@@ -1,6 +1,0 @@
-VERTEX WORKSTATION FACTORY SMOKE TEST 000001H1
-================================================
-Purpose : verify RECEIVE -> INSPECT -> STAGE -> APPLY -> VERIFY.
-Safety  : harmless marker only; no production source mutation.
-Authority: HUMAN_APPLY
-Expected : FACTORY_SMOKE_TEST_000001H1=PASS
