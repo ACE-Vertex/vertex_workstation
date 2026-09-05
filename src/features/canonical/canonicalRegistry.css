@@ -1,0 +1,427 @@
+.canonical-page {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: 116px minmax(0, 1fr) 34px;
+  gap: 10px;
+  padding: 14px 18px 10px;
+  overflow: hidden;
+  color: #e5edf0;
+  background:
+    linear-gradient(rgba(255,255,255,.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.010) 1px, transparent 1px),
+    radial-gradient(circle at 76% -20%, rgba(255,142,46,.08), transparent 38rem),
+    #05080a;
+  background-size: 40px 40px, 40px 40px, auto, auto;
+}
+
+.canonical-hero {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 4px 8px;
+  border-bottom: 1px solid rgba(255,142,46,.30);
+}
+
+.canonical-hero > div:first-child > span,
+.canonical-list > header span,
+.canonical-detail-header > div > span {
+  color: #7a7470;
+  font-size: 8px;
+  letter-spacing: .20em;
+}
+
+.canonical-hero h1 {
+  margin: 3px 0 0;
+  font-size: clamp(34px, 3vw, 54px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.canonical-hero h1 strong {
+  color: #ff8e2e;
+}
+
+.canonical-hero p {
+  margin: 8px 0 0;
+  color: #665f5b;
+  font-size: 10px;
+}
+
+.canonical-hero-meta {
+  min-width: 260px;
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.canonical-hero-meta span {
+  color: #746d69;
+  font-size: 7px;
+  letter-spacing: .12em;
+}
+
+.canonical-hero-meta strong {
+  color: #ff9b42;
+  font: 11px "Cascadia Mono", Consolas, monospace;
+}
+
+.canonical-hero-meta code {
+  color: #706a67;
+  font-size: 8px;
+}
+
+.canonical-grid {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(330px, .72fr) minmax(700px, 1.72fr);
+  gap: 10px;
+}
+
+.canonical-list,
+.canonical-detail {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,142,46,.23);
+  border-radius: 8px;
+  background: #070b0e;
+}
+
+.canonical-list {
+  display: grid;
+  grid-template-rows: 48px 42px minmax(0, 1fr);
+}
+
+.canonical-list > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 10px 0 12px;
+  border-bottom: 1px solid rgba(255,142,46,.20);
+  background: #0a0e11;
+}
+
+.canonical-list h2 {
+  margin: 2px 0 0;
+  font-size: 14px;
+}
+
+.compact-action,
+.canonical-save button {
+  min-height: 27px;
+  padding: 0 9px;
+  border: 1px solid rgba(255,142,46,.34);
+  border-radius: 5px;
+  background: #090e11;
+  color: #b5b0ad;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: .07em;
+}
+
+.compact-action:hover,
+.canonical-save button:hover {
+  border-color: rgba(255,142,46,.62);
+  color: #ff9b42;
+}
+
+.canonical-search {
+  padding: 7px 8px 0;
+}
+
+.canonical-search input {
+  width: 100%;
+  height: 30px;
+  padding: 0 9px;
+  border: 1px solid rgba(101,199,239,.18);
+  border-radius: 5px;
+  outline: 0;
+  background: #061016;
+  color: #acbbc2;
+  font-size: 8px;
+}
+
+.canonical-card-list {
+  min-height: 0;
+  overflow: auto;
+  padding: 8px;
+}
+
+.canonical-card {
+  position: relative;
+  min-width: 0;
+  margin-bottom: 7px;
+  border: 1px solid rgba(101,199,239,.16);
+  border-left: 3px solid rgba(101,199,239,.26);
+  border-radius: 7px;
+  background: #08121a;
+}
+
+.canonical-card.active {
+  border-color: rgba(255,142,46,.62);
+  border-left-color: #ff8e2e;
+  background: #120c08;
+}
+
+.canonical-card-main {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px 34px 10px 9px;
+  border: 0;
+  background: transparent;
+  color: #dce6ea;
+  text-align: left;
+}
+
+.concept-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  align-self: start;
+  border: 1px solid rgba(101,199,239,.20);
+  border-radius: 9px;
+  background: #0a1b2a;
+  color: #9bc9de;
+  font: 12px "Cascadia Mono", Consolas, monospace;
+}
+
+.canonical-card-title {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.canonical-card-title strong {
+  overflow: hidden;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.canonical-card-title span {
+  flex: 0 0 auto;
+  color: #8ea2ad;
+  font: 8px "Cascadia Mono", Consolas, monospace;
+}
+
+.canonical-card p {
+  margin: 5px 0 7px;
+  color: #7b8d96;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.canonical-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.canonical-card-badges span {
+  padding: 2px 5px;
+  border: 1px solid rgba(101,199,239,.18);
+  border-radius: 999px;
+  color: #78a7bd;
+  font-size: 6px;
+}
+
+.canonical-card-badges span:first-child {
+  color: #55d99f;
+  border-color: rgba(85,217,159,.24);
+}
+
+.canonical-card-badges span:nth-child(2) {
+  color: #e2ae4d;
+  border-color: rgba(226,174,77,.26);
+}
+
+.canonical-card-delete {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(201,83,83,.18);
+  border-radius: 5px;
+  background: #090d10;
+  color: #815d5d;
+  font-size: 11px;
+}
+
+.canonical-card-delete:hover {
+  border-color: rgba(222,86,86,.48);
+  color: #e06b6b;
+}
+
+.canonical-detail {
+  display: grid;
+  grid-template-rows: 94px minmax(0, 1fr) auto;
+}
+
+.canonical-detail-header {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 16px;
+  border-bottom: 1px solid rgba(255,142,46,.20);
+  background: #0a0e11;
+}
+
+.canonical-detail-header h2 {
+  margin: 4px 0 0;
+  font-size: 22px;
+}
+
+.canonical-detail-header h2 em {
+  margin-left: 10px;
+  color: #8ea1aa;
+  font: 10px "Cascadia Mono", Consolas, monospace;
+  font-style: normal;
+}
+
+.canonical-detail-header p {
+  margin: 5px 0 0;
+  color: #77858c;
+  font-size: 9px;
+}
+
+.canonical-detail-status {
+  padding: 5px 9px;
+  border: 1px solid rgba(85,217,159,.34);
+  border-radius: 999px;
+  color: #55d99f;
+  font-size: 7px;
+}
+
+.canonical-form {
+  min-height: 0;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 9px 12px;
+  padding: 12px 14px;
+}
+
+.canonical-form label {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.canonical-form label > span {
+  color: #687880;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+
+.canonical-form input,
+.canonical-form select,
+.canonical-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid rgba(101,199,239,.17);
+  border-radius: 5px;
+  outline: 0;
+  background: #050b0f;
+  color: #bdc9ce;
+  font: 10px/1.5 "Cascadia Mono", Consolas, monospace;
+}
+
+.canonical-form select {
+  color-scheme: dark;
+}
+
+.canonical-form textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.canonical-form .span-2 {
+  grid-column: 1 / -1;
+}
+
+.canonical-bottom {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: end;
+  padding: 0 12px 10px;
+}
+
+.canonical-save {
+  min-width: 82px;
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.canonical-save span {
+  color: #65747b;
+  font: 6px "Cascadia Mono", Consolas, monospace;
+}
+
+.canonical-empty {
+  display: grid;
+  place-items: center;
+  color: #5d6b72;
+}
+
+.canonical-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 10px;
+  border: 1px solid rgba(255,142,46,.18);
+  border-radius: 6px;
+  background: #070d10;
+  color: #675f5b;
+  font: 7px "Cascadia Mono", Consolas, monospace;
+}
+
+@media (max-width: 1180px) {
+  .canonical-page {
+    overflow: auto;
+  }
+
+  .canonical-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 340px 760px;
+  }
+
+  .canonical-hero-meta {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .canonical-form {
+    grid-template-columns: 1fr;
+  }
+
+  .canonical-form .span-2 {
+    grid-column: 1;
+  }
+
+  .canonical-bottom {
+    grid-template-columns: 1fr;
+  }
+}

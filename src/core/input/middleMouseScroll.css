@@ -1,0 +1,8 @@
+.middle-scroll-surface {
+  overscroll-behavior: contain;
+}
+
+.middle-scroll-surface[data-middle-scroll-active="true"] {
+  cursor: grabbing;
+  user-select: none;
+}

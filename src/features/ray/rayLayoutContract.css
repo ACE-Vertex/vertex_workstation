@@ -1,0 +1,71 @@
+/*
+  RAY LAYOUT CONTRACT — 000006H2
+
+  Single owner for the RAY page vertical lane geometry.
+  This file MUST load after ray.css.
+
+  The prior failure happened because ray.css still owned the old six-row
+  template while rayProcessing.css attempted to override it. Bundled CSS
+  order allowed the old rule to win at runtime, leaving the cockpit inside
+  the old fixed 36px track.
+
+  Persistent structure:
+    1 Hero
+    2 Project Root
+    3 Operation Indicator
+    4 Command Bar
+    5 Runtime Notice
+    6 Cockpit
+    7 Status Board
+*/
+
+.workstation-shell .workspace-stage .ray-page {
+  grid-template-rows:
+    92px
+    52px
+    40px
+    52px
+    auto
+    minmax(0, 1fr)
+    36px;
+}
+
+.workstation-shell .workspace-stage .ray-page > .ray-hero {
+  grid-row: 1;
+}
+
+.workstation-shell .workspace-stage .ray-page > .ray-project-root-bar {
+  grid-row: 2;
+}
+
+.workstation-shell .workspace-stage .ray-page > .operation-indicator {
+  grid-row: 3;
+}
+
+.workstation-shell .workspace-stage .ray-page > .ray-command-bar {
+  grid-row: 4;
+}
+
+.workstation-shell .workspace-stage .ray-page > .ray-runtime-error {
+  grid-row: 5;
+  min-height: 0;
+  max-height: 34px;
+  align-self: start;
+}
+
+.workstation-shell .workspace-stage .ray-page > .ray-cockpit {
+  grid-row: 6;
+  min-height: 0;
+  height: 100%;
+  align-self: stretch;
+}
+
+.workstation-shell .workspace-stage .ray-page > .ray-status-board {
+  grid-row: 7;
+}
+
+/*
+  Large-screen contract remains information-dense.
+  Responsive rearrangement belongs to the cockpit's own ray.css rules;
+  this file owns only the page lanes.
+*/

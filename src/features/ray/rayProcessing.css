@@ -1,0 +1,34 @@
+/*
+  RAY PROCESSING PRESENTATION CONTRACT
+
+  This file owns only processing-layer presentation.
+  It intentionally does NOT own page grid rows.
+*/
+
+.ray-page {
+  position: relative;
+  isolation: isolate;
+}
+
+.ray-page > :not(.processing-grid-distortion) {
+  position: relative;
+  z-index: 1;
+}
+
+.ray-processing .ray-panel,
+.ray-processing .ray-project-root-bar,
+.ray-processing .ray-command-bar,
+.ray-processing .operation-indicator,
+.ray-processing .ray-status-board {
+  backdrop-filter: blur(.25px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ray-processing .ray-panel,
+  .ray-processing .ray-project-root-bar,
+  .ray-processing .ray-command-bar,
+  .ray-processing .operation-indicator,
+  .ray-processing .ray-status-board {
+    backdrop-filter: none;
+  }
+}
